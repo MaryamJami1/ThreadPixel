@@ -1,9 +1,22 @@
 <!-- Page Hero -->
-<section style="padding:4rem 0 3rem;border-bottom:1px solid var(--border);text-align:center;">
-    <div class="container">
-        <div class="section-tag reveal">Our Work</div>
-        <h1 class="section-title reveal" style="font-size:clamp(2rem,4vw,3rem);margin-top:0.75rem;">Digitizing Portfolio</h1>
-        <p class="section-desc reveal">Real designs. Real stitches. Hover over any card to see the original artwork.</p>
+<section class="inner-page-hero portfolio-page-hero">
+    <div class="container inner-hero-layout">
+        <div class="inner-hero-copy">
+            <div class="section-tag reveal">Our Work</div>
+            <h1 class="section-title reveal" style="font-size:clamp(2rem,4vw,3rem);margin-top:0.75rem;">Digitizing Portfolio</h1>
+            <p class="section-desc reveal">Real designs. Real stitches. Hover over any card to see the original artwork.</p>
+        </div>
+        <div class="inner-hero-art portfolio-hero-art reveal reveal-delay-1" aria-hidden="true">
+            <span class="hero-art-label">archive / 02</span><div class="portfolio-frame portfolio-frame-back"></div><div class="portfolio-frame portfolio-frame-front"><span class="frame-grid"></span><strong>PIXEL<br><em>TO THREAD</em></strong><span class="frame-stitch"></span></div><span class="hero-art-pixel portfolio-pixel-a"></span><span class="hero-art-pixel portfolio-pixel-b"></span><span class="hero-art-pixel portfolio-pixel-c"></span>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio-archive-bar">
+    <div class="container portfolio-archive-inner">
+        <div><span class="archive-kicker">The archive</span><strong>Artwork, translated.</strong></div>
+        <div class="archive-note"><span>Original</span><b>→</b><span>Production file</span></div>
+        <div class="archive-count"><strong><?= count($items) ?></strong><span>projects shown</span></div>
     </div>
 </section>
 
@@ -26,10 +39,10 @@
         <?php else: ?>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.75rem;" id="portfolio-grid">
             <?php foreach ($items as $i => $item): ?>
-            <div class="card reveal reveal-delay-<?= ($i%3)+1 ?>" style="overflow:hidden;">
+            <div class="card portfolio-card reveal reveal-delay-<?= ($i%3)+1 ?>" style="overflow:hidden;">
 
                 <!-- Image with Before/After hover -->
-                <div class="portfolio-img-wrap" style="height:230px;background:#000;position:relative;overflow:hidden;cursor:pointer;">
+                <div class="portfolio-img-wrap" tabindex="0" role="button" aria-label="Compare original and digitized artwork" style="height:230px;background:#000;position:relative;overflow:hidden;cursor:pointer;">
                     <?php if ($item->actual_embroidery_path || $item->digitized_preview_path): ?>
                     <img class="portfolio-img-after" src="<?= BASE_URL ?>/<?= $item->actual_embroidery_path ?: $item->digitized_preview_path ?>" alt="Embroidery" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 0.4s;">
                     <?php endif; ?>
@@ -37,7 +50,7 @@
                     <img class="portfolio-img-before" src="<?= BASE_URL ?>/<?= $item->original_artwork_path ?>" alt="Original" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:1rem;opacity:0;transition:opacity 0.4s;background:#0A0B0F;">
                     <?php endif; ?>
                     <div style="position:absolute;bottom:0.75rem;left:0.75rem;right:0.75rem;display:flex;justify-content:space-between;opacity:0;transition:opacity 0.3s;" class="portfolio-labels">
-                        <span style="background:rgba(0,0,0,0.8);color:var(--text-secondary);padding:0.2rem 0.6rem;border-radius:9999px;font-size:0.7rem;backdrop-filter:blur(4px);">Hover → Original</span>
+                        <span style="background:rgba(0,0,0,0.8);color:var(--text-secondary);padding:0.2rem 0.6rem;border-radius:9999px;font-size:0.7rem;backdrop-filter:blur(4px);">Digitized ↔ Original</span>
                     </div>
                 </div>
 
@@ -51,7 +64,7 @@
                     <?php if ($item->description): ?>
                     <p style="color:var(--text-muted);font-size:0.82rem;line-height:1.6;margin-bottom:1rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;"><?= htmlspecialchars($item->description) ?></p>
                     <?php endif; ?>
-                    <div style="display:flex;gap:1.5rem;font-size:0.8rem;color:var(--text-muted);border-top:1px solid var(--border);padding-top:0.75rem;">
+                    <div class="portfolio-meta" style="display:flex;gap:1.5rem;font-size:0.8rem;color:var(--text-muted);border-top:1px solid var(--border);padding-top:0.75rem;">
                         <?php if ($item->stitch_count): ?><span>🧵 <?= number_format($item->stitch_count) ?> stitches</span><?php endif; ?>
                         <?php if ($item->dimensions): ?><span>📐 <?= htmlspecialchars($item->dimensions) ?></span><?php endif; ?>
                     </div>
@@ -86,6 +99,18 @@ document.querySelectorAll('.portfolio-img-wrap').forEach(wrap => {
         if (before) before.style.opacity = '0';
         if (after)  after.style.opacity  = '1';
         if (labels) labels.style.opacity = '0';
+    });
+    wrap.addEventListener('click', () => {
+        const showingBefore = before && before.style.opacity === '1';
+        if (before) before.style.opacity = showingBefore ? '0' : '1';
+        if (after) after.style.opacity = showingBefore ? '1' : '0';
+        if (labels) labels.style.opacity = '1';
+    });
+    wrap.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            wrap.click();
+        }
     });
 });
 </script>

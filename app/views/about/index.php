@@ -1,116 +1,81 @@
-<!-- Hero -->
-<section style="padding: 6rem 0; border-bottom: 1px solid var(--border-color);">
-    <div class="container text-center">
-        <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.2;">
-            We Turn <span style="color: var(--accent-blue);">Artwork</span> Into <span style="color: var(--accent-gold);">Stitches</span>
-        </h1>
-        <p style="font-size: 1.25rem; color: var(--gray-text); max-width: 750px; margin: 0 auto;">
-            ThreadPixel is a professional embroidery digitizing studio serving apparel brands, promotional product companies, embroidery shops, and creators worldwide.
-        </p>
+<section class="about-hero">
+    <div class="container about-hero-grid">
+        <div class="about-hero-copy reveal">
+            <div class="eyebrow"><span class="eyebrow-dot"></span> The studio behind the stitches</div>
+            <h1>Where creative<br><em>meets precise.</em></h1>
+            <p>ThreadPixel turns artwork into embroidery that looks right on screen and runs beautifully on fabric.</p>
+            <a href="<?= BASE_URL ?>/contact" class="btn btn-primary">Start a conversation <span>↗</span></a>
+        </div>
+        <div class="about-art reveal reveal-delay-1" aria-hidden="true"><div class="about-art-circle"></div><div class="about-art-thread"></div><div class="about-art-needle"></div><div class="about-art-pixels"><i></i><i></i><i></i><i></i><i></i></div><strong>CRAFT<br><em>THE DETAIL</em></strong><span>est. for makers / 01</span></div>
     </div>
 </section>
 
-<!-- Mission -->
-<section class="container" style="padding: 5rem 0;">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
-        <div>
-            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Our Mission</h2>
-            <p style="color: var(--gray-text); margin-bottom: 1.5rem; line-height: 1.8;">
-                Our mission is to make professional-grade embroidery digitizing accessible, fast, and reliable for businesses of all sizes — from one-person Etsy shops to large-scale contract embroiderers.
-            </p>
-            <p style="color: var(--gray-text); line-height: 1.8;">
-                Every design we create is handled by a real human digitizer, reviewed for quality before delivery, and optimized to run cleanly on your specific machine type.
-            </p>
-        </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-            <div style="background: var(--secondary-bg); padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;">
-                <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent-blue);">500+</div>
-                <div style="color: var(--gray-text); font-size: 0.9rem; margin-top: 0.5rem;">Designs Delivered</div>
-            </div>
-            <div style="background: var(--secondary-bg); padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;">
-                <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent-gold);">20+</div>
-                <div style="color: var(--gray-text); font-size: 0.9rem; margin-top: 0.5rem;">Countries Served</div>
-            </div>
-            <div style="background: var(--secondary-bg); padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;">
-                <div style="font-size: 2.5rem; font-weight: 800; color: var(--success);">12h</div>
-                <div style="color: var(--gray-text); font-size: 0.9rem; margin-top: 0.5rem;">Avg. Turnaround</div>
-            </div>
-            <div style="background: var(--secondary-bg); padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); text-align: center;">
-                <div style="font-size: 2.5rem; font-weight: 800; color: var(--danger);">98%</div>
-                <div style="color: var(--gray-text); font-size: 0.9rem; margin-top: 0.5rem;">Satisfaction Rate</div>
-            </div>
+<section class="about-mission section">
+    <div class="container mission-grid">
+        <div class="mission-copy reveal"><div class="eyebrow">Our point of view</div><h2>Technology gives us speed.<br><em>Craft gives us judgment.</em></h2><p>Professional digitizing is more than converting an image. It is understanding fabric, thread behavior, stitch direction, and the small decisions that make a finished piece feel intentional.</p><p>Our human-first approach combines production knowledge with careful digital preparation, giving brands and makers files they can send straight to the machine with confidence.</p></div>
+        <div class="about-stats">
+            <div class="about-stat reveal reveal-delay-1"><strong data-count="500">0</strong><span>designs delivered</span></div>
+            <div class="about-stat reveal reveal-delay-2"><strong data-count="20">0</strong><span>countries served</span></div>
+            <div class="about-stat reveal reveal-delay-3"><strong data-count="12">0</strong><span>hour average turnaround</span></div>
+            <div class="about-stat reveal reveal-delay-1"><strong data-count="98">0</strong><span>percent satisfaction</span></div>
         </div>
     </div>
 </section>
 
-<!-- What Makes Us Different -->
-<section style="background: var(--secondary-bg); padding: 5rem 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+<section class="principles-section">
     <div class="container">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">What Makes Us Different</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-            <div style="padding: 2rem; background: var(--primary-bg); border-radius: 8px; border: 1px solid var(--border-color);">
-                <div style="font-size: 2rem; margin-bottom: 1rem;">🧵</div>
-                <h4 style="margin-bottom: 0.75rem;">Human Digitizers Only</h4>
-                <p style="color: var(--gray-text); font-size: 0.9rem;">Every order is handled by an experienced digitizer. No auto-digitizing software is used on your final files.</p>
+        <div class="section-heading-row reveal"><div><div class="eyebrow">What we believe</div><h2>A sharper eye<br>for the <em>small stuff.</em></h2></div><p>Every project is a conversation between your artwork and the material it will live on.</p></div>
+        <div class="principles-layout">
+            <div class="principle-tabs" role="tablist">
+                <button class="principle-tab active" type="button" data-principle="quality"><span>01</span> Professional quality <b>↗</b></button>
+                <button class="principle-tab" type="button" data-principle="speed"><span>02</span> Built for momentum <b>↗</b></button>
+                <button class="principle-tab" type="button" data-principle="partnership"><span>03</span> A real partner <b>↗</b></button>
             </div>
-            <div style="padding: 2rem; background: var(--primary-bg); border-radius: 8px; border: 1px solid var(--border-color);">
-                <div style="font-size: 2rem; margin-bottom: 1rem;">⚡</div>
-                <h4 style="margin-bottom: 0.75rem;">Fast Delivery</h4>
-                <p style="color: var(--gray-text); font-size: 0.9rem;">Most designs are ready within 12–24 hours. Rush options are available for urgent orders.</p>
-            </div>
-            <div style="padding: 2rem; background: var(--primary-bg); border-radius: 8px; border: 1px solid var(--border-color);">
-                <div style="font-size: 2rem; margin-bottom: 1rem;">🌍</div>
-                <h4 style="margin-bottom: 0.75rem;">International Service</h4>
-                <p style="color: var(--gray-text); font-size: 0.9rem;">We work with clients from USA, UK, Australia, Europe, and beyond. All formats supported globally.</p>
-            </div>
-            <div style="padding: 2rem; background: var(--primary-bg); border-radius: 8px; border: 1px solid var(--border-color);">
-                <div style="font-size: 2rem; margin-bottom: 1rem;">🔁</div>
-                <h4 style="margin-bottom: 0.75rem;">Free Revisions</h4>
-                <p style="color: var(--gray-text); font-size: 0.9rem;">We stand behind our work. If something isn't right, we fix it until you're completely satisfied.</p>
-            </div>
+            <div class="principle-panel" data-panel="quality"><span class="panel-mark">✦</span><h3>Details that survive the stitch.</h3><p>We prepare files around real production conditions, balancing clean edges, stable underlay, density, and thread economy.</p></div>
+            <div class="principle-panel is-hidden" data-panel="speed"><span class="panel-mark">↗</span><h3>Clear work, quick decisions.</h3><p>Fast does not mean rushed. Our process keeps feedback, pricing, and file delivery simple so your next run keeps moving.</p></div>
+            <div class="principle-panel is-hidden" data-panel="partnership"><span class="panel-mark">∞</span><h3>Built around your workflow.</h3><p>From a one-off logo to a growing apparel line, we learn what matters to your production and stay close to the details.</p></div>
         </div>
     </div>
 </section>
 
-<!-- Process Timeline -->
-<section class="container" style="padding: 5rem 0;">
-    <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">Our Process</h2>
-    <p style="text-align: center; color: var(--gray-text); margin-bottom: 4rem;">From your artwork to production-ready files in 4 simple steps.</p>
-
-    <div style="position: relative; max-width: 800px; margin: 0 auto;">
-        <!-- Timeline Line -->
-        <div style="position: absolute; left: 28px; top: 0; bottom: 0; width: 2px; background: var(--border-color);"></div>
-
-        <?php 
-        $steps = [
-            ['icon' => '📤', 'title' => 'Submit Your Artwork', 'desc' => 'Upload your logo, design, or artwork through our secure quote form. Include any notes about size, format, and placement.'],
-            ['icon' => '💬', 'title' => 'We Review & Quote', 'desc' => 'Our team reviews your design, assesses the stitch count and complexity, and sends you a competitive price quote.'],
-            ['icon' => '🧵', 'title' => 'Digitizing Begins', 'desc' => 'Once approved, our digitizers get to work — carefully mapping out every stitch path, underlay, and color stop.'],
-            ['icon' => '📦', 'title' => 'File Delivery', 'desc' => 'You receive your embroidery files in your required format (DST, PES, etc.) directly through your dashboard.'],
-        ];
-        foreach ($steps as $i => $step): 
-        ?>
-        <div style="display: flex; gap: 2rem; margin-bottom: 2.5rem; position: relative;">
-            <div style="width: 56px; height: 56px; background: var(--secondary-bg); border: 2px solid var(--accent-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; z-index: 1;">
-                <?= $step['icon'] ?>
-            </div>
-            <div style="background: var(--secondary-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); flex: 1;">
-                <h4 style="margin-bottom: 0.5rem; color: var(--accent-blue);">Step <?= $i + 1 ?>: <?= $step['title'] ?></h4>
-                <p style="color: var(--gray-text); margin: 0; font-size: 0.95rem;"><?= $step['desc'] ?></p>
-            </div>
-        </div>
-        <?php endforeach; ?>
-    </div>
-</section>
-
-<!-- CTA -->
-<section style="padding: 5rem 0; text-align: center;">
-    <div class="container" style="background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(234,179,8,0.05)); padding: 4rem 2rem; border-radius: 16px; border: 1px solid var(--border-color);">
-        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Work With Us?</h2>
-        <p style="color: var(--gray-text); margin-bottom: 2rem; font-size: 1.1rem;">Join hundreds of businesses who trust ThreadPixel with their embroidery digitizing needs.</p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="<?= BASE_URL ?>/quote" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Get a Quote</a>
-            <a href="<?= BASE_URL ?>/contact" class="btn btn-outline" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Contact Us</a>
+<section class="about-process section">
+    <div class="container">
+        <div class="section-heading-centered reveal"><div class="eyebrow">How we work</div><h2>A thoughtful path from<br><em>pixel to product.</em></h2><p>Four clear stages. One finished design you can trust.</p></div>
+        <div class="about-timeline">
+            <?php $steps = [['01','Listen','We learn about your artwork, garment, size, and production goal.'],['02','Build','A digitizer maps every path, layer, underlay, and color stop.'],['03','Review','We inspect the file for clean movement and reliable machine output.'],['04','Deliver','You receive the formats you need, ready for the next stitch.']]; foreach ($steps as $i => $step): ?>
+            <div class="about-timeline-item reveal reveal-delay-<?= $i + 1 ?>"><div class="timeline-node"><?= $step[0] ?></div><div><h3><?= $step[1] ?></h3><p><?= $step[2] ?></p></div></div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
+
+<section class="about-cta"><div class="container about-cta-inner reveal"><div><div class="eyebrow">Make it tangible</div><h2>Have a design<br>in mind?</h2></div><p>Tell us what you are making. We will help you find the clearest path from artwork to embroidery.</p><a href="<?= BASE_URL ?>/quote" class="btn btn-primary">Get a Free Quote <span>↗</span></a></div></section>
+
+<script>
+document.querySelectorAll('.principle-tab').forEach(tab => tab.addEventListener('click', () => {
+    document.querySelectorAll('.principle-tab').forEach(item => item.classList.remove('active'));
+    document.querySelectorAll('.principle-panel').forEach(panel => panel.classList.add('is-hidden'));
+    tab.classList.add('active');
+    document.querySelector(`[data-panel="${tab.dataset.principle}"]`).classList.remove('is-hidden');
+}));
+
+const aboutStats = document.querySelectorAll('.about-stat strong[data-count]');
+if ('IntersectionObserver' in window && aboutStats.length) {
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const target = entry.target;
+            const end = Number(target.dataset.count);
+            const start = performance.now();
+            const update = now => {
+                const progress = Math.min((now - start) / 900, 1);
+                target.textContent = Math.floor(end * (1 - Math.pow(1 - progress, 3))) + (end === 12 ? 'h' : end === 98 ? '%' : '+');
+                if (progress < 1) requestAnimationFrame(update);
+            };
+            requestAnimationFrame(update);
+            observer.unobserve(target);
+        });
+    }, { threshold: .65 });
+    aboutStats.forEach(stat => statsObserver.observe(stat));
+}
+</script>
